@@ -7,7 +7,6 @@ export function useDashboardAuth() {
   const logout = useLogout();
   const store = useDashboardStore();
   const { data: me, isLoading: isMeLoading, refetch: refetchMe } = useMe();
-  console.log("meeeeeeeeee => ",me)
 
   const userId = me?.id || me?.user?.id || null;
   const dbRole = me?.role || null;
