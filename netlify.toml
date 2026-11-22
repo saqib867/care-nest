@@ -1,0 +1,3 @@
+[build.environment]
+  # Supabase URL and publishable key are public by design (shipped to the browser)
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY"

@@ -1,7 +1,8 @@
 const { Client } = require("pg");
 require("dotenv").config({ path: "../.env" });
 
-const connectionString = "postgresql://postgres:0gTfm1odEc53yFH5@db.kpyimawxndocqbsqcmxc.supabase.co:5432/postgres";
+const connectionString = process.env.DATABASE_URL;
+if (!connectionString) throw new Error("DATABASE_URL is not set in .env");
 
 const caregiversToSeed = [
   {
